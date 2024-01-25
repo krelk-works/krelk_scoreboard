@@ -1,6 +1,4 @@
-# krelk_scoreboard
-
-# <h1 align="center">Este es un encabezado centrado</h1>
+# <h1 align="center">krelk_scoreboard</h1>
 
 ## Description
 
