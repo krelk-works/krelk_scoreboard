@@ -1,4 +1,4 @@
-# <h1 align="center">krelk_scoreboard</h1>
+# <p align="center">· krelk_scoreboard ·</p>
 
 ## Description
 
@@ -28,9 +28,9 @@
    - Clone or download the repository to your local machine.
    - Run the following command in your terminal:
 
-     bash```
-     git clone https://github.com/yourusername/krelk_scoreboard.git
-     ```
+```
+	git clone https://github.com/yourusername/krelk_scoreboard.git
+```
 
 2. **Installation:**
    - Copy the `krelk_scoreboard` folder into your server's resources directory.
@@ -42,14 +42,12 @@
    - Ensure that your server is using the ESX framework for optimal compatibility.
 
 5. **Start the Resource:**
-   - Add `start krelk_scoreboard` to your server.cfg to start the resource.
+   - Add `ensure krelk_scoreboard` to your server.cfg to start the resource.
 
 ## Usage
 
 1. **Launch your server.**
 2. **Access the scoreboard:**
-   - View player information, server name, and admin status [ By default key is F9].
+   - View player information, server name, and admin status [*By default key is **F9***].
 3. **Customization:**
    - Adjust the script configuration options as needed to tailor the experience.
-
-
