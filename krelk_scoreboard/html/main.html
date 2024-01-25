@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <title>krelk scoreboard</title>
+</head>
+<body>
+    <div id="scoreboard">
+        <div id="adminsonline" class="scoreboard-icon" style="display:none;">
+            <div class="content offline_admins">
+                <i class="fas fa-shield-halved"></i>
+            </div>
+            <p class="number-count " id="admins_status">Offline</p>
+        </div>
+        <div id="policeonline" class="scoreboard-icon">
+            <div class="content">
+                <i class="fas fa-person-military-pointing"></i>
+            </div>
+            <p class="number-count" id="policecount">0</p>
+        </div>
+        <div id="emsonline" class="scoreboard-icon">
+            <div class="content">
+                <i class="fas fa-truck-medical"></i>
+            </div>
+            <p class="number-count" id="emscount">0</p>
+        </div>
+        <div id="mechaniconline" class="scoreboard-icon">
+            <div class="content">
+                <i class="fas fa-wrench"></i>
+            </div>
+            <p class="number-count" id="mechaniccount">0</p>
+        </div>
+        <div id="taxionline" class="scoreboard-icon">
+            <div class="content">
+                <i class="fas fa-taxi"></i>
+            </div>
+            <p class="number-count" id="taxicount">0</p>
+        </div>
+        <div id="playersonline" class="scoreboard-icon">
+            <div class="content">
+                <i class="fas fa-person"></i>
+            </div>
+            <p class="number-count" id="playerscount"><span id="playercount_number">0</span>/<span id="playerscount_maxplayers">0</span></p>
+        </div>
+    </div>
+    <div id="servername">
+        <h3></h3>
+    </div>
+</body>
+</html>

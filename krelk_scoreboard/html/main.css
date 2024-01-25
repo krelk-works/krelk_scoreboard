@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#scoreboard {
+    display: none;
+    width: 22.5%;
+    padding: 5px 0% 0% 0%;
+    /*display: grid;*/
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 100%;
+    margin: 0 auto;
+    font-family: 'Poppins';
+    font-style: normal;
+    text-align: center;
+    background: rgb(0,37,255);
+    background: linear-gradient(0deg, rgba(0,37,255,0.6601015406162465) 0%, rgba(0,0,0,0.6516981792717087) 100%);
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0,37,255,1);
+    overflow: hidden;
+}
+
+.scoreboard-icon {
+    display: block;
+    color: white;
+    font-size: calc((2.5vw+2.5vh)/3);
+    margin: auto 0;
+}
+
+.scoreboard-icon .content {
+    display: inline-block;
+    padding: calc((.5vw+.5vh)/2);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
+    box-shadow: 0px 0px 8px 0px rgba(255,255,255,1);
+    width: calc((2.5vw+2.5vh)/2);
+    height: calc((2.5vw+2.5vh)/2);
+}
+
+.number-count {
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.782), 0 0 10px rgba(139, 139, 139, 0.5);
+}
+
+.offline_admins {
+    color: red;
+}
+
+.online_admins {
+    color: greenyellow;
+}
+
+#servername {
+    display: none;
+    width: 15%;
+    padding: 5px 0% 0% 0%;
+    margin: 0 auto;
+    font-family: 'Poppins';
+    font-style: normal;
+    text-align: center;
+    background: rgb(0,37,255);
+    background: linear-gradient(0deg, rgba(0,37,255,0.6601015406162465) 0%, rgba(0,37,255,0.6601015406162465) 65%, rgba(0,0,0,0.2516981792717087) 100%);
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0,37,255,1);
+    overflow: hidden;
+    z-index: -1;
+}
+
+#servername h3 {
+    text-transform: uppercase;
+    animation: flip 8s infinite;
+    animation-delay: 15;
+}
+
+@keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+}
