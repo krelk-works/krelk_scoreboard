@@ -4,7 +4,7 @@
 
 **krelk_scoreboard** is an essential script for your server, providing vital information about connected players and available services for citizens. This script is a must-have for enhancing the roleplay experience in your gaming world.
 
-![gif](krelk_scoreboard/krelk-scoreboard-gif.gif)
+<span align="center"> ![gif](krelk_scoreboard/krelk-scoreboard-gif.gif) </span>
 
 ## Features
 
