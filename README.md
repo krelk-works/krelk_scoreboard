@@ -1,5 +1,7 @@
 # krelk_scoreboard
 
+# <h1 align="center">Este es un encabezado centrado</h1>
+
 ## Description
 
 **krelk_scoreboard** is an essential script for your server, providing vital information about connected players and available services for citizens. This script is a must-have for enhancing the roleplay experience in your gaming world.
