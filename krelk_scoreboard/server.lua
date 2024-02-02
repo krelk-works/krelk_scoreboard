@@ -9,13 +9,13 @@ ESX.RegisterServerCallback('krelk_scoreboard:getOnlinePlayers', function(source,
                 adminsOnline=adminsOnline+1
             end
             local xPlayerJob = xPlayer.getJob().name
-            if xPlayerJob == Config.PoliceJob then --Police Count
+            if checkWhitelistedJobs(xPlayerJob, Config.PoliceJobs) then --Police Count
                 policeOnline=policeOnline+1
-            elseif xPlayerJob == Config.AmbulanceJob then --Ems Count
+            elseif checkWhitelistedJobs(xPlayerJob, Config.AmbulanceJobs) then --Ems Count
                 emsOnline=emsOnline+1
-            elseif xPlayerJob == Config.MechanicJob then --Mechanic Count
+            elseif checkWhitelistedJobs(xPlayerJob, Config.MechanicJobs) then --Mechanic Count
                 mechanicOnline=mechanicOnline+1
-            elseif xPlayerJob == Config.TaxiJob then --Taxi Count
+            elseif checkWhitelistedJobs(xPlayerJob, Config.TaxiJobs) then --Taxi Count
                 taxiOnline=taxiOnline+1
             end
         end
@@ -42,13 +42,13 @@ RegisterNetEvent('esx:setJob', function(player, job, lastJob)
                     adminsOnline=adminsOnline+1
                 end
                 local xPlayerJob = xPlayer.getJob().name
-                if xPlayerJob == Config.PoliceJob then --Police Count
+                if checkWhitelistedJobs(xPlayerJob, Config.PoliceJobs) then --Police Count
                     policeOnline=policeOnline+1
-                elseif xPlayerJob == Config.AmbulanceJob then --Ems Count
+                elseif checkWhitelistedJobs(xPlayerJob, Config.AmbulanceJobs) then --Ems Count
                     emsOnline=emsOnline+1
-                elseif xPlayerJob == Config.MechanicJob then --Mechanic Count
+                elseif checkWhitelistedJobs(xPlayerJob, Config.MechanicJobs) then --Mechanic Count
                     mechanicOnline=mechanicOnline+1
-                elseif xPlayerJob == Config.TaxiJob then --Taxi Count
+                elseif checkWhitelistedJobs(xPlayerJob, Config.TaxiJobs) then --Taxi Count
                     taxiOnline=taxiOnline+1
                 end
             end
@@ -72,4 +72,13 @@ function isWhitelistedJob(job)
         end
     end
     return isWhitelisted
+end
+
+function checkWhitelistedJobs(job, jobsArray)
+    for k,v in ipairs(jobsArray) do
+        if v == job then
+            return true
+        end
+    end
+    return false
 end

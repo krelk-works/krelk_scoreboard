@@ -1,3 +1,6 @@
+local antiSpam = false
+local clientTimeout = nil
+
 --IF RESOURCE IS RESTARTED THIS EVENT HANDLER WILL SET UP THE CONFIG AND COLORS AGAIN
 AddEventHandler('onResourceStart', function(resourceName)
     if (GetCurrentResourceName() ~= resourceName) then
@@ -66,9 +69,20 @@ AddEventHandler('krelk_scoreboard:update', function(playersData)
 end)
 
 RegisterNUICallback('getOnlinePlayers', function(data, cb)
+    if Config.AntiSpamEvent then
+        if antiSpam then
+            cb('notok')
+            return
+        end
+    end
     ESX.TriggerServerCallback('krelk_scoreboard:getOnlinePlayers', function(playersData)
         if playersData then
             cb(playersData)
+            if Config.AntiSpamEvent then
+                if not antiSpam then
+                    startAntiSpamEvent()
+                end
+            end
         else
             cb(false)
         end
@@ -82,3 +96,8 @@ RegisterCommand('scoreboard', function()
 end)
 
 RegisterKeyMapping('scoreboard', 'Krelk Free ScoreBoard', 'keyboard', Config.ScoreBoardKey)
+
+function startAntiSpamEvent()
+    antiSpam = true
+    clientTimeout = ESX.SetTimeout(Config.TimeoutEvent*1000, function() antiSpam = false clientTimeout = nil end)
+end

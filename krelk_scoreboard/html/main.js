@@ -15,6 +15,17 @@ window.addEventListener('message', (event) => {
                 }
             }).then(resp => resp.json()).then(resp => {
                 if (resp && !isLoaading) {
+                    if (resp == "notok") {
+                        $("#scoreboard").fadeIn(330);
+                        $("#scoreboard").css("display", "grid");
+                        setTimeout(() => {
+                            onScreen = true;
+                            isLoaading = false;
+                        }, "330");
+                        autoHideFunction();
+                        if (serverNameEnabled) { $("#servername").fadeIn(330); }
+                        return;
+                    }
                     isLoaading=true;
                     //Admins Count
                     if (resp[0] > 0) {

@@ -7,8 +7,7 @@ version '1.0.0'
 ui_page 'html/main.html'
 
 files {
-    'html/**',
-    'html/media/**'
+    'html/*.*',
 }
 
 client_script 'client.lua'
