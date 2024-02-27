@@ -2,7 +2,7 @@
 
 ## Description
 
-**krelk_scoreboard** is an essential script for your server, providing vital information about connected players and available services for citizens. This script is a must-have for enhancing the roleplay experience in your gaming world.
+**krelk_scoreboard** is an essential script for your FiveM server, providing vital information about connected players and available services for citizens. This script is a must-have for enhancing the roleplay experience in your gaming world.
 <p align="center">
   <img src="krelk_scoreboard/krelk-scoreboard-gif.gif" alt="scoreboard image gif">
 </p>
