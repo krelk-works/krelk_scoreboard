@@ -30,7 +30,7 @@
    - Run the following command in your terminal:
 
 ```
-	git clone https://github.com/yourusername/krelk_scoreboard.git
+	git clone https://github.com/krelk-works/krelk_scoreboard.git
 ```
 
 2. **Installation:**
